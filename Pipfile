@@ -1,0 +1,25 @@
+[[source]]
+url = "https://mirrors.aliyun.com/pypi/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+redis = "*"
+0326b75 = {path = "./Twisted-17.9.0"}
+Scrapy = "*"
+scrapy-redis = "*"
+SQLAlchemy = "*"
+configparser = "*"
+pymysql = "*"
+pymongo = "*"
+celery = "==4.0.2"
+lxml = "*"
+msgpack-python = "*"
+flower = "*"
+pandas = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
