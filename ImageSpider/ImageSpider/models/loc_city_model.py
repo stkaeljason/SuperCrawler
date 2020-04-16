@@ -11,8 +11,8 @@ from ImageSpider.db import DBSession
 session = DBSession()
 
 
-from sqlalchemy import create_engine
-engine = create_engine('mysql+pymysql://'+'root'+':'+'root'+'@'+'127.0.0.1'+':'+'3306'+'/'+'img_crawler'+'')
+# from sqlalchemy import create_engine
+# engine = create_engine('mysql+pymysql://'+'root'+':'+'root'+'@'+'127.0.0.1'+':'+'3306'+'/'+'img_crawler'+'')
 
 Base = declarative_base()
 
@@ -56,6 +56,6 @@ def city_set_crawled(city_id,is_crawled=1):
         # session.close()
         pass
 
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 
 
