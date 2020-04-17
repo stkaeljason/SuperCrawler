@@ -85,11 +85,11 @@ class ImageSpider(RedisCrawlSpider):
     }
     cookies_dict = {}
     user_im_sum = 0
+    profile_response = None
 
     def parse(self, response):
-        # super(ImageSpider, self).__init__(*args, **kwargs)
+        self.profile_response = response
         self.image_num_limit = int(get_config('ins_im_limit','ins_im_crawl'))  # 获取每个人的图片抓取量配置
-        # print('image_num_limit', self.image_num_limit)
         image_save_fold = get_config('ins_im_fold', 'ins_im_crawl')       # 获取人脸文件夹的保存文件夹名称
         print('image_save_fold', image_save_fold)
 
@@ -102,7 +102,7 @@ class ImageSpider(RedisCrawlSpider):
                 self.log(cookiejar_name)
                 time.sleep(3)
                 yield Request(login_page,
-                           meta={'cookiejar': cookiejar_name,  'profile_response': response,'formdata': account, 'image_save_fold':image_save_fold},
+                           meta={'cookiejar': cookiejar_name,  'formdata': account, 'image_save_fold':image_save_fold},
                            callback=self.login, errback=self.report_error, dont_filter=True)
         else:
             self.log('request % again'%response.url)
@@ -130,7 +130,8 @@ class ImageSpider(RedisCrawlSpider):
 
         if len(self.cookies_dict) > 2:
             item = ImageItem()
-            sel = Selector(response.meta['profile_response'])
+            # sel = Selector(response.meta['profile_response'])
+            sel = Selector(self.profile_response)
             img_data = sel.xpath('//script[contains(text(),"window._sharedData")]/text()').extract()[0]
             img_dict = json.loads(img_data.lstrip('window._sharedData = ').rstrip(';'))
             img_user_info = img_dict['entry_data']['ProfilePage'][0]['graphql']['user']

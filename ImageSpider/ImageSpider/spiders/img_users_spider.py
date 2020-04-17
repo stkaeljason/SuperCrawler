@@ -52,7 +52,7 @@ class ImgUserSpider(RedisCrawlSpider):
         'origin': 'https://www.instagram.com',
         'referer': 'https://www.instagram.com',
         'x-csrftoken': '',
-        'x-instagram-ajax': 1,
+        # 'x-instagram-ajax': 1,
         'x-requested-with': 'XMLHttpRequest',
         'X-Instagram-AJAX':'ac5d0f89adf7',
         'X-IG-App-ID': '936619743392459',
@@ -60,14 +60,16 @@ class ImgUserSpider(RedisCrawlSpider):
     }
 
     cookies_dict = {}
+    profile_response = None
 
     def parse(self, response):
         login_page = 'https://www.instagram.com/'
+        self.profile_response = response
         if len(self.cookies_dict) == 0:
             for form_data in user_crawl_list:
                 cookiejar_name = form_data['username']
                 time.sleep(3)
-                yield Request(login_page, meta={'cookiejar':cookiejar_name,'profile_response':response,'form_data':form_data},callback=self.login,errback=self.report_error,dont_filter=True)
+                yield Request(login_page, meta={'cookiejar':cookiejar_name, 'form_data':form_data},callback=self.login,errback=self.report_error,dont_filter=True)
 
         else:
             yield Request(response.url,meta={'profile_response': response},
@@ -92,8 +94,8 @@ class ImgUserSpider(RedisCrawlSpider):
     def parse_main_loc(self,response):
         # item = ImgUserItem()
         if len(self.cookies_dict) != 0:
-            sel = Selector(response.meta['profile_response'])
-            # sel = Selector(response)
+            # sel = Selector(response.meta['profile_response'])
+            sel = Selector(self.profile_response)
             img_data = sel.xpath('//script[contains(text(),"window._sharedData")]/text()').extract()[0]
             img_dict = json.loads(img_data.lstrip('window._sharedData = ').rstrip(';'))
             # print('testest_response______________+++++++++++++')
