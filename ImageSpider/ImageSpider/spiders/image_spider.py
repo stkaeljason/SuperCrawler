@@ -106,7 +106,7 @@ class ImageSpider(RedisCrawlSpider):
                            callback=self.login, errback=self.report_error, dont_filter=True)
         else:
             self.log('request % again'%response.url)
-            yield Request(response.url,meta={'profile_response': response, 'image_save_fold': image_save_fold},
+            yield Request(response.url,meta={'image_save_fold': image_save_fold},
                            callback=self.parse_main_page, errback=self.report_error, dont_filter=True)
 
 

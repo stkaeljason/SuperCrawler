@@ -74,7 +74,7 @@ class ImgUserSpider(RedisCrawlSpider):
                 yield Request(login_page, meta={'cookiejar':cookiejar_name, 'form_data':form_data},callback=self.login,errback=self.report_error,dont_filter=True)
 
         else:
-            yield Request(response.url,meta={'profile_response': response},
+            yield Request(response.url,
                            callback=self.parse_main_loc, errback=self.report_error, dont_filter=True)
 
     def login(self,response):
