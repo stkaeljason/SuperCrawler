@@ -3,6 +3,7 @@
 # python
 import json
 import redis
+import demjson
 
 # scrapy
 import time
@@ -156,7 +157,8 @@ class ImgUserSpider(RedisCrawlSpider):
         # json_data = img_data.lstrip('window.__additionalDataLoaded').rstrip(';')
         x_index = img_data.index('{')
         json_data = img_data[x_index:-1].rstrip(')')
-        img_dict = json.loads(json_data)
+        # img_dict = json.loads(json_data)
+        img_dict = demjson.decode(json_data)
         # user_info = img_dict['entry_data']['PostPage'][0]['graphql']['shortcode_media']['owner']
         user_info = img_dict['graphql']['shortcode_media']['owner']
         item['img_user_id'] = user_info['id']

@@ -18,6 +18,7 @@ lxml = "*"
 msgpack-python = "*"
 flower = "*"
 pandas = "*"
+demjson = "*"
 
 [dev-packages]
 
