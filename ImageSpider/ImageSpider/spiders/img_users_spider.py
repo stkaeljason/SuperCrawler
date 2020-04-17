@@ -4,6 +4,7 @@
 import json
 import redis
 import demjson
+import jsonlike
 
 # scrapy
 import time
@@ -150,7 +151,6 @@ class ImgUserSpider(RedisCrawlSpider):
 
     def parse_user_info(self,response):
         """pase userid username"""
-        import jsonlike
         item = ImgUserItem()
         sel = Selector(response)
         # img_data = sel.xpath('//script[contains(text(),"window._sharedData")]/text()').extract()[0]
@@ -160,7 +160,7 @@ class ImgUserSpider(RedisCrawlSpider):
         json_data = img_data[x_index:-1].rstrip(')')
         # img_dict = json.loads(json_data)
         # img_dict = demjson.decode(json_data)
-        img_dict = jsonlike.loads(json_data)
+        img_dict = jsonlike.unwrap_and_load(json_data)
         # user_info = img_dict['entry_data']['PostPage'][0]['graphql']['shortcode_media']['owner']
         user_info = img_dict['graphql']['shortcode_media']['owner']
         item['img_user_id'] = user_info['id']
