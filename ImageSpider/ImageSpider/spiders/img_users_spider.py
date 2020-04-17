@@ -2,9 +2,6 @@
 
 # python
 import json
-import redis
-import demjson
-import jsonlike
 
 # scrapy
 import time
