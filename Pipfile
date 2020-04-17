@@ -18,10 +18,8 @@ lxml = "*"
 msgpack-python = "*"
 flower = "*"
 pandas = "*"
-demjson = "*"
 jsonlike = "*"
 install = "*"
-pyyaml = "*"
 
 [dev-packages]
 
