@@ -19,6 +19,7 @@ msgpack-python = "*"
 flower = "*"
 pandas = "*"
 demjson = "*"
+jsonlike = "*"
 
 [dev-packages]
 
