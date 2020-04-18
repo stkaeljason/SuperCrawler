@@ -19,7 +19,7 @@ def run(args):
         ImageSpider.name = 'ins_im_spider_'+args.name
 
         ins_use_list = get_ins_user(args.name)
-        crawl_account_list = [{'username': user.user_name, 'password': user.pass_wd,'queryParams': {}} for user in ins_use_list]
+        crawl_account_list = [{'username': user.user_name, 'password': user.pass_wd,'queryParams': {}, 'enc_password':enc_password, 'optIntoOneTap':"false"} for user in ins_use_list]
 
         # ImageSpider.account_list = accounts['account_list_'+args.name]
         ImageSpider.account_list = crawl_account_list
