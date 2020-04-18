@@ -51,7 +51,7 @@ class ImgUserSpider(RedisCrawlSpider):
         'origin': 'https://www.instagram.com',
         'referer': 'https://www.instagram.com',
         'x-csrftoken': '',
-        # 'x-instagram-ajax': 1,
+        'x-instagram-ajax': 1,
         'x-requested-with': 'XMLHttpRequest',
         'X-Instagram-AJAX':'ac5d0f89adf7',
         'X-IG-App-ID': '936619743392459',

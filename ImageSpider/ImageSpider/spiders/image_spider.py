@@ -67,8 +67,10 @@ class ImageSpider(RedisCrawlSpider):
         'referer': 'https://www.instagram.com',
         'x-csrftoken': 'NzoRNJ1qvkKvZ3pbJBvSSgXlzZA9lrOK',
         'x-instagram-ajax': 1,
-        'x-requested-with': 'XMLHttpRequest'
-
+        'x-requested-with': 'XMLHttpRequest',
+        'X-Instagram-AJAX': 'ac5d0f89adf7',
+        'X-IG-App-ID': '936619743392459',
+        'X-IG-WWW-Claim': 'hmac.AR3Gl3WT587606JvGPiRZ-6hPTo94XToJ4C8s8hgPLFBl_PB'
     }
 
     login_headers = {
