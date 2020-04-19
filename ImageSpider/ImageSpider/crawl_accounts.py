@@ -15,6 +15,16 @@ user_crawl_list=[
     # 'enc_password':'#PWD_INSTAGRAM_BROWSER:6:1586323021:AZtQANEgU/aFVNI8sEHU94HBHYrByUasv1ifC5gjTXfEflllZ7eSsuC4YnCoz0jVXWRN/SPWdmbR4q6AJogmmee5dAvn4emTTogD+pUA6nAkoKgljpv1EYTnackE8N+cALsORbvg+ZVrPbMn',
     # 'optIntoOneTap':"false"
 },
+{
+    'username': 'yulin890765jason',
+    'password': 'st123456',
+    'queryParams': {},
+},
+{
+    'username': 'bmsdlf324320skdfjk',
+    'password': 'st123456',
+    'queryParams': {},
+},
 ]
 tag_accounts = {'tag0':[
 {

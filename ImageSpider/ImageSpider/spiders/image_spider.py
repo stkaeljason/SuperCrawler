@@ -84,9 +84,9 @@ class ImageSpider(RedisCrawlSpider):
         'x-csrftoken': '',
         'x-instagram-ajax': 1,
         'x-requested-with': 'XMLHttpRequest',
-        'X-Instagram-AJAX':'ac5d0f89adf7',
-        'X-IG-App-ID': '936619743392459',
-        'X-IG-WWW-Claim': 'hmac.AR3Gl3WT587606JvGPiRZ-6hPTo94XToJ4C8s8hgPLFBl_PB'
+        # 'X-Instagram-AJAX':'ac5d0f89adf7',
+        # 'X-IG-App-ID': '936619743392459',
+        # 'X-IG-WWW-Claim': 'hmac.AR3Gl3WT587606JvGPiRZ-6hPTo94XToJ4C8s8hgPLFBl_PB'
     }
     cookies_dict = {}
     user_im_sum = 0
