@@ -47,15 +47,15 @@ class ImgUserSpider(RedisCrawlSpider):
         'accept-encoding': 'gzip, deflate, br',
         'accept-language': 'en-US,en;q=0.9',
         'content-type': 'application/x-www-form-urlencoded',
-        'user-agent': 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/64.0.3282.167 Chrome/64.0.3282.167 Safari/537.36',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.113 Safari/537.36',
         'origin': 'https://www.instagram.com',
         'referer': 'https://www.instagram.com',
         'x-csrftoken': '',
-        'x-instagram-ajax': 1,
+        # 'x-instagram-ajax': 1,
         'x-requested-with': 'XMLHttpRequest',
-    #     'X-Instagram-AJAX':'ac5d0f89adf7',
-    #     'X-IG-App-ID': '936619743392459',
-    #     'X-IG-WWW-Claim': 'hmac.AR3Gl3WT587606JvGPiRZ-6hPTo94XToJ4C8s8hgPLFBl_PB'
+        'x-instagram-ajax':'cc6f59f85f33',
+        'x-ig-app-id': '936619743392459',
+        'x-ig-www-claim': 'hmac.AR2YuvekAxUlhQIFufQIkIkZrwHxjMCf2ahd6umqU7TX-HUx'
     }
 
     cookies_dict = {}
