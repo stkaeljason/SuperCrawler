@@ -16,12 +16,17 @@ user_crawl_list=[
     # 'optIntoOneTap':"false"
 },
 {
-    'username': 'yulin890765jason',
+    'username': 'liaohuan890765liaoh',
     'password': 'st123456',
     'queryParams': {},
 },
 {
-    'username': 'bmsdlf324320skdfjk',
+    'username': 'lh18080992liaohuan',
+    'password': 'st123456',
+    'queryParams': {},
+},
+{
+    'username': 'chenyanmei0000cym',
     'password': 'st123456',
     'queryParams': {},
 },
