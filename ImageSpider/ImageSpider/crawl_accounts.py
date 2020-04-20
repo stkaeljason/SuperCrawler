@@ -8,20 +8,13 @@ user_crawl_list=[
 #     # 'enc_password':'#PWD_INSTAGRAM_BROWSER:6:1586323021:AZtQANEgU/aFVNI8sEHU94HBHYrByUasv1ifC5gjTXfEflllZ7eSsuC4YnCoz0jVXWRN/SPWdmbR4q6AJogmmee5dAvn4emTTogD+pUA6nAkoKgljpv1EYTnackE8N+cALsORbvg+ZVrPbMn',
 #     # 'optIntoOneTap':"false"
 # },
-# {
-#     'username': 'yulinjason',
-#     'password': 'st123456',
-#     'queryParams': {},
-#     # 'enc_password':'#PWD_INSTAGRAM_BROWSER:6:1586323021:AZtQANEgU/aFVNI8sEHU94HBHYrByUasv1ifC5gjTXfEflllZ7eSsuC4YnCoz0jVXWRN/SPWdmbR4q6AJogmmee5dAvn4emTTogD+pUA6nAkoKgljpv1EYTnackE8N+cALsORbvg+ZVrPbMn',
-#     # 'optIntoOneTap':"false"
-# },
 {
-    'username': 'chenyanmei0000cym',
+    'username': 'liaohuan00001liaohuan',
     'password': 'st123456',
     'queryParams': {},
 },
 {
-    'username': 'yangyin0000yy',
+    'username': 'liaohuan00002lh',
     'password': 'st123456',
     'queryParams': {},
 },
@@ -31,12 +24,7 @@ user_crawl_list=[
     'queryParams': {},
 },
 {
-    'username': 'tangjili0000tjl',
-    'password': 'st123456',
-    'queryParams': {},
-},
-{
-    'username': 'tjl1111tangjili',
+    'username': 'lh00300liaohuan',
     'password': 'st123456',
     'queryParams': {},
 },
