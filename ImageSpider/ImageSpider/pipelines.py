@@ -97,12 +97,9 @@ class ImagespiderPipeline(object):
             try:
                 self.session.add(img_user)
                 self.session.commit()
-            except pymysql.err.IntegrityError as e:
-                print("Duplicate entry %s for key img_user_id"%item['img_user_id'])
-                # utils.send_mail(str(e), 'ImagespiderPipeline', 'jason', 'ImgUserItem_exception')
-                self.session.rollback()
             except Exception as e:
-                print(str(e))
+                print("Duplicate entry %s for key img_user_id" % item['img_user_id'])
+                self.session.rollback()
             return item
 
         elif isinstance(item, ImageItem):
