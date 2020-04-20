@@ -125,11 +125,11 @@ class ImagespiderDownloaderMiddleware(object):
     def process_request(self, request, spider):
         # request.meta['proxy'] = "https://127.0.0.1:" +str(proxy_port)
         request.meta['download_timeout'] = 25
-        request.headers['user-agent'] = random.choice(agents)
         if 'ins_im' in spider.name:
             # if 'query_hash=' in request.url or 'explore/locations' in request.url:
             print('spider.cookies_dict----->', spider.cookies_dict)
             if 'https://www.instagram.com/' in request.url and 'login' not in request.url:
+                request.headers['user-agent'] = random.choice(agents)
                 cookiejar_dict = spider.cookies_dict
                 if list(cookiejar_dict):
                     count = 0

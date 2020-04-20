@@ -1,19 +1,44 @@
 #coding:utf-8
 
 user_crawl_list=[
+# {
+#     'username': 'lhb1111liuhoubiao',
+#     'password': 'st123456',
+#     'queryParams': {},
+#     # 'enc_password':'#PWD_INSTAGRAM_BROWSER:6:1586323021:AZtQANEgU/aFVNI8sEHU94HBHYrByUasv1ifC5gjTXfEflllZ7eSsuC4YnCoz0jVXWRN/SPWdmbR4q6AJogmmee5dAvn4emTTogD+pUA6nAkoKgljpv1EYTnackE8N+cALsORbvg+ZVrPbMn',
+#     # 'optIntoOneTap':"false"
+# },
+# {
+#     'username': 'yulinjason',
+#     'password': 'st123456',
+#     'queryParams': {},
+#     # 'enc_password':'#PWD_INSTAGRAM_BROWSER:6:1586323021:AZtQANEgU/aFVNI8sEHU94HBHYrByUasv1ifC5gjTXfEflllZ7eSsuC4YnCoz0jVXWRN/SPWdmbR4q6AJogmmee5dAvn4emTTogD+pUA6nAkoKgljpv1EYTnackE8N+cALsORbvg+ZVrPbMn',
+#     # 'optIntoOneTap':"false"
+# },
 {
-    'username': 'lhb1111liuhoubiao',
+    'username': 'chenyanmei0000cym',
     'password': 'st123456',
     'queryParams': {},
-    'enc_password':'#PWD_INSTAGRAM_BROWSER:6:1586323021:AZtQANEgU/aFVNI8sEHU94HBHYrByUasv1ifC5gjTXfEflllZ7eSsuC4YnCoz0jVXWRN/SPWdmbR4q6AJogmmee5dAvn4emTTogD+pUA6nAkoKgljpv1EYTnackE8N+cALsORbvg+ZVrPbMn',
-    'optIntoOneTap':"false"
 },
 {
-    'username': 'yulinjason',
+    'username': 'yangyin0000yy',
     'password': 'st123456',
     'queryParams': {},
-    'enc_password':'#PWD_INSTAGRAM_BROWSER:6:1586323021:AZtQANEgU/aFVNI8sEHU94HBHYrByUasv1ifC5gjTXfEflllZ7eSsuC4YnCoz0jVXWRN/SPWdmbR4q6AJogmmee5dAvn4emTTogD+pUA6nAkoKgljpv1EYTnackE8N+cALsORbvg+ZVrPbMn',
-    'optIntoOneTap':"false"
+},
+{
+    'username': 'yy1111yangyin',
+    'password': 'st123456',
+    'queryParams': {},
+},
+{
+    'username': 'tangjili0000tjl',
+    'password': 'st123456',
+    'queryParams': {},
+},
+{
+    'username': 'tjl1111tangjili',
+    'password': 'st123456',
+    'queryParams': {},
 },
 ]
 tag_accounts = {'tag0':[
