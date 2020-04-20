@@ -9,6 +9,7 @@
 # item
 import os
 import json
+import pymysql
 from ImageSpider.items import LocTagItem
 from ImageSpider.items import ImgUserItem
 from ImageSpider.items import CityTagItem
@@ -96,10 +97,12 @@ class ImagespiderPipeline(object):
             try:
                 self.session.add(img_user)
                 self.session.commit()
-            except Exception as e:
-                print(str(e))
+            except pymysql.err.IntegrityError as e:
+                print("Duplicate entry %s for key img_user_id"%item['img_user_id'])
                 # utils.send_mail(str(e), 'ImagespiderPipeline', 'jason', 'ImgUserItem_exception')
                 self.session.rollback()
+            except Exception as e:
+                print(str(e))
             return item
 
         elif isinstance(item, ImageItem):
