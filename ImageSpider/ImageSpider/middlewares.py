@@ -128,6 +128,7 @@ class ImagespiderDownloaderMiddleware(object):
         request.headers['user-agent'] = random.choice(agents)
         if 'ins_im' in spider.name:
             # if 'query_hash=' in request.url or 'explore/locations' in request.url:
+            print('spider.cookies_dict----->', spider.cookies_dict)
             if 'https://www.instagram.com/' in request.url and 'login' not in request.url:
                 cookiejar_dict = spider.cookies_dict
                 if list(cookiejar_dict):
@@ -136,7 +137,7 @@ class ImagespiderDownloaderMiddleware(object):
                         cookiejar_name = random.choice(list(cookiejar_dict))
                         if cookiejar_dict[cookiejar_name]['is_useful'] == 0:
                             request.meta['cookiejar'] = cookiejar_name
-                            self.logger.info('0000 cookiejar:%s'%cookiejar_name)
+                            self.logger.info('this cookiejar----->%s'%cookiejar_name)
                             break
                         elif cookiejar_dict[cookiejar_name]['is_useful'] == 1:
                             if (int(time.time()) - cookiejar_dict[cookiejar_name]['time_p']) > 3600:
@@ -150,19 +151,7 @@ class ImagespiderDownloaderMiddleware(object):
 
 
     def process_response(self, request, response, spider):
-        # Called with the response returned from the downloader.
-
-        # Must either;
-        # - return a Response object
-        # - return a Request object
-        # - or raise IgnoreRequest
-        # if response.status == 404:
-        #     self.logger.info(str(response.status)+'----%s----the site request too much need to rest 100s'% spider.name)
-        #     # redis_hander.zadd(spider.name+':requests', response.request, 0.1)
-        #     # print('sdfsdftestsetst')
-        #     time.sleep(15)
         if 'ins_im' in spider.name:
-            print('spider.cookies_dict----->&&&&&&&',spider.cookies_dict)
 
             if 'https://www.instagram.com/graphql/query/?query_hash=' in response.url:
                 cookiejar_name = request.meta['cookiejar']
@@ -181,9 +170,10 @@ class ImagespiderDownloaderMiddleware(object):
                 cookiejar_name = request.meta['cookiejar']
                 print(cookiejar_name, 'is logining')
                 if response.status == 200:
-                    print(cookiejar_name, 'login success')
+                    print(cookiejar_name, '---->login success')
                     spider.cookies_dict[cookiejar_name] = {'is_useful':0,'time_p':0}
                 else:
+                    print(cookiejar_name, '---->login fail')
                     utils.send_mail('%s:this account:%s login fail to yanzhen' % (spider.name, request.meta['cookiejar']),
                                     spider.name, 'jason', 'crawl_exception')
 
