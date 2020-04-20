@@ -14,17 +14,7 @@ user_crawl_list=[
     'queryParams': {},
 },
 {
-    'username': 'liaohuan00002lh',
-    'password': 'st123456',
-    'queryParams': {},
-},
-{
     'username': 'yy1111yangyin',
-    'password': 'st123456',
-    'queryParams': {},
-},
-{
-    'username': 'lh00300liaohuan',
     'password': 'st123456',
     'queryParams': {},
 },

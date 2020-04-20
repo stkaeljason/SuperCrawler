@@ -98,7 +98,7 @@ class ImagespiderPipeline(object):
                 self.session.add(img_user)
                 self.session.commit()
             except Exception as e:
-                print("Duplicate entry %s for key img_user_id" % item['img_user_id'])
+                print("**************Duplicate entry %s for key img_user_id" % item['img_user_id**************'])
                 self.session.rollback()
             return item
 
