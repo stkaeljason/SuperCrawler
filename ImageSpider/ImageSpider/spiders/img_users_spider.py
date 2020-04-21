@@ -85,7 +85,7 @@ class ImgUserSpider(RedisCrawlSpider):
     profile_response = None
 
     def parse(self, response):
-        login_page = 'https://www.instagram.com/'
+        login_page = 'https://www.instagram.com/accounts/login/'
         self.profile_response = response
         if len(self.cookies_dict) == 0:
             for form_data in user_crawl_list:
