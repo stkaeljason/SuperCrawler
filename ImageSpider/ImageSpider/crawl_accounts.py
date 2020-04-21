@@ -1,13 +1,6 @@
 #coding:utf-8
 
 user_crawl_list=[
-# {
-#     'username': 'lhb1111liuhoubiao',
-#     'password': 'st123456',
-#     'queryParams': {},
-#     # 'enc_password':'#PWD_INSTAGRAM_BROWSER:6:1586323021:AZtQANEgU/aFVNI8sEHU94HBHYrByUasv1ifC5gjTXfEflllZ7eSsuC4YnCoz0jVXWRN/SPWdmbR4q6AJogmmee5dAvn4emTTogD+pUA6nAkoKgljpv1EYTnackE8N+cALsORbvg+ZVrPbMn',
-#     # 'optIntoOneTap':"false"
-# },
 {
     'username': 'liaohuan00001liaohuan',
     'password': 'st123456',

@@ -128,7 +128,7 @@ class ImagespiderDownloaderMiddleware(object):
         if 'ins_im' in spider.name:
             # if 'query_hash=' in request.url or 'explore/locations' in request.url:
             print('spider.cookies_dict----->', spider.cookies_dict)
-            if 'https://www.instagram.com/graphql/query' in request.url and 'login' not in request.url :
+            if 'https://www.instagram.com' in request.url and 'login' not in request.url and 'explore/locations' not in request.url:
                 request.headers['user-agent'] = random.choice(agents)
                 cookiejar_dict = spider.cookies_dict
                 if list(cookiejar_dict):
