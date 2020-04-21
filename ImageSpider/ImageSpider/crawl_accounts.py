@@ -18,6 +18,16 @@ user_crawl_list=[
     'password': 'st123456',
     'queryParams': {},
 },
+{
+    'username': 'nbtz888tao88zhu',
+    'password': 'st123456',
+    'queryParams': {},
+},
+{
+    'username': 'gogotao999zhutao99j',
+    'password': 'st123456',
+    'queryParams': {},
+},
 ]
 tag_accounts = {'tag0':[
 {
