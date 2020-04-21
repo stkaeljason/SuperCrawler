@@ -17,7 +17,30 @@ from scrapy.http import FormRequest
 from ImageSpider import utils
 from ImageSpider.models.location_tag_model import loc_set_crawled
 # from ImageSpider.db import user_crawl_list
-from ImageSpider.crawl_accounts import user_crawl_list
+# from ImageSpider.crawl_accounts import user_crawl_list
+
+user_crawl_list=[
+{
+    'username': 'liaohuan00001liaohuan',
+    'password': 'st123456',
+    'queryParams': {},
+},
+{
+    'username': 'gogotao999zhutao99j',
+    'password': 'st123456',
+    'queryParams': {},
+},
+{
+    'username': 'nbtz888tao88zhu',
+    'password': 'st123456',
+    'queryParams': {},
+},
+{
+    'username': 'yy1111yangyin',
+    'password': 'st123456',
+    'queryParams': {},
+},
+]
 
 class ImgUserSpider(RedisCrawlSpider):
     name = 'ins_im_users_spider'
@@ -67,6 +90,7 @@ class ImgUserSpider(RedisCrawlSpider):
         if len(self.cookies_dict) == 0:
             for form_data in user_crawl_list:
                 cookiejar_name = form_data['username']
+                print(cookiejar_name)
                 time.sleep(3)
                 yield Request(login_page, meta={'cookiejar':cookiejar_name, 'form_data':form_data},callback=self.login,errback=self.report_error,dont_filter=True)
 
@@ -80,7 +104,7 @@ class ImgUserSpider(RedisCrawlSpider):
         img_data = sel.xpath('//script[contains(text(),"window._sharedData")]/text()').extract()[0]
         img_dict = json.loads(img_data.lstrip('window._sharedData = ').rstrip(';'))
         self.login_headers['x-csrftoken'] = img_dict['config']['csrf_token']
-        time.sleep(7)
+        time.sleep(5)
         yield FormRequest(url='https://www.instagram.com/accounts/login/ajax/',
                          meta=response.meta,
                          headers=self.login_headers,
