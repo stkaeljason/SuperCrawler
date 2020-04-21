@@ -24,27 +24,27 @@ CELERYBEAT_SCHEDULE = {
     #     'args': (1,'United Arab Emirates') # limt_num crawl loc
     #
     # },
-    # 'product_loc_url':{
-    #     'task': 'CrawlSchedule.instagram_tasks.product_loc_url',
-    #
-    #     'schedule': crontab(minute='*/2'),
-    #
-    #     'args': (20,'United Arab Emirates') # limt_num crawl user
-    # },
+    'product_loc_url':{
+        'task': 'CrawlSchedule.instagram_tasks.product_loc_url',
+
+        'schedule': crontab(minute='*/4',hour='9-22'),
+
+        'args': (4,'Kenya') # limt_num crawl user
+    },
     'product_user_url':{
         'task': 'CrawlSchedule.instagram_tasks.product_user_url',
 
-        'schedule': crontab(minute='*/120', hour='0-23'),
-        'args': (30,'United States') # limt_num
+        'schedule': crontab(minute='*/6', hour='9-22'),
+        'args': (60,'Kenya') # limt_num
 
     },
-    'get_yipei_number':{
-        'task': 'CrawlSchedule.instagram_tasks.get_yipei_number',
-
-        'schedule': crontab(minute='*/3'),
-        'args': (1,) # limt_num
-
-    }
+    # 'get_yipei_number':{
+    #     'task': 'CrawlSchedule.instagram_tasks.get_yipei_number',
+    #
+    #     'schedule': crontab(minute='*/3'),
+    #     'args': (1,) # limt_num
+    #
+    # }
 #     'product_hoc_car_url':{
 #         'task': 'CrawlSchedule.instagram_tasks.product_hoc_car_url',
 #
