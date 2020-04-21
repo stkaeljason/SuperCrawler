@@ -80,7 +80,7 @@ class ImgUserSpider(RedisCrawlSpider):
         img_data = sel.xpath('//script[contains(text(),"window._sharedData")]/text()').extract()[0]
         img_dict = json.loads(img_data.lstrip('window._sharedData = ').rstrip(';'))
         self.login_headers['x-csrftoken'] = img_dict['config']['csrf_token']
-        time.sleep(5)
+        time.sleep(7)
         yield FormRequest(url='https://www.instagram.com/accounts/login/ajax/',
                          meta=response.meta,
                          headers=self.login_headers,
