@@ -14,7 +14,7 @@ user_crawl_list=[
     'queryParams': {},
 },
 {
-    'username': 'yy1111yangyin',
+    'username': 'gogotao999zhutao99j',
     'password': 'st123456',
     'queryParams': {},
 },
@@ -24,7 +24,7 @@ user_crawl_list=[
     'queryParams': {},
 },
 {
-    'username': 'gogotao999zhutao99j',
+    'username': 'yy1111yangyin',
     'password': 'st123456',
     'queryParams': {},
 },
