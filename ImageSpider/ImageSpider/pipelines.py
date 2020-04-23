@@ -95,7 +95,8 @@ class ImagespiderPipeline(object):
                 user_profile_url = item['user_profile_url']
             )
             try:
-                user_list = self.session.query(ImgUser).filter(ImgUser.img_user_id == item['img_user_id'])
+                user_list = self.session.query(ImgUser).filter(ImgUser.img_user_id == item['img_user_id']).limit(1)
+                print('user_list-->',user_list)
                 if not user_list:
                     self.session.add(img_user)
                     self.session.commit()
