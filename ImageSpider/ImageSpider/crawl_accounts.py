@@ -21,6 +21,21 @@ user_crawl_list=[
     'password': 'st123456',
     'queryParams': {},
 },
+{
+    'username': 'cym1111chenyammei',
+    'password': 'st123456',
+    'queryParams': {},
+},
+{
+    'username': 'tjl1111tangjili',
+    'password': 'st123456',
+    'queryParams': {},
+},
+{
+    'username': 'wyw1111wyw',
+    'password': 'st123456',
+    'queryParams': {},
+},
 ]
 tag_accounts = {'tag0':[
 {
