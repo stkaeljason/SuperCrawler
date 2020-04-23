@@ -27,15 +27,15 @@ CELERYBEAT_SCHEDULE = {
     'product_loc_url':{
         'task': 'CrawlSchedule.instagram_tasks.product_loc_url',
 
-        'schedule': crontab(minute='*/4',hour='9-22'),
+        'schedule': crontab(minute='*/4',hour='9-23'),
 
-        'args': (4,'Kenya') # limt_num crawl user
+        'args': (25,'Kenya') # limt_num crawl user
     },
     'product_user_url':{
         'task': 'CrawlSchedule.instagram_tasks.product_user_url',
 
-        'schedule': crontab(minute='*/6', hour='9-22'),
-        'args': (60,'Kenya') # limt_num
+        'schedule': crontab(minute='*/6', hour='9-23'),
+        'args': (90,'Kenya') # limt_num
 
     },
     # 'get_yipei_number':{

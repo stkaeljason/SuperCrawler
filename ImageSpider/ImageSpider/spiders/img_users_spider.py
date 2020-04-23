@@ -166,7 +166,7 @@ class ImgUserSpider(RedisCrawlSpider):
                           meta=response.meta,
                           headers=self.more_img_headers,
                           errback=self.report_error)
-            time.sleep(3)
+            time.sleep(1)
         else:
             loc_set_crawled(img_dict['data']['location']['id'],is_crawled=1)
 
