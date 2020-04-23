@@ -96,15 +96,16 @@ class ImagespiderPipeline(object):
             )
             try:
                 # user_list = self.session.query(ImgUser).filter(ImgUser.img_user_id == item['img_user_id']).limit(1)
-                user = ImgUser.query.filter_by(img_user_id == item['img_user_id']).first()
-                # print('user_list-->',user)
-                if not user:
-                    self.session.add(img_user)
-                    self.session.commit()
-                else:
-                    print("*++*************Duplicate entry %s for key img_user_id*************++*'" % item['img_user_id'])
+                # user = ImgUser.query.filter_by(img_user_id == item['img_user_id']).first()
+                # # print('user_list-->',user)
+                # if not user:
+                self.session.add(img_user)
+                self.session.commit()
+                # else:
+
             except Exception as e:
-                print(str(e))
+                # print(str(e))
+                print("*++*************Duplicate entry %s for key img_user_id*************++*'" % item['img_user_id'])
                 self.session.rollback()
             return item
 
