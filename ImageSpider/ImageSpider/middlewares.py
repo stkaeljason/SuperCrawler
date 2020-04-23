@@ -153,7 +153,7 @@ class ImagespiderDownloaderMiddleware(object):
     def process_response(self, request, response, spider):
         if 'ins_im' in spider.name:
 
-            if 'https://www.instagram.com/graphql/query/?query_hash=' in response.url:
+            if 'query/?query_hash=' in response.url or " https://www.instagram.com/explore/locations" in response.url:
                 cookiejar_name = request.meta['cookiejar']
                 if response.status == 429:
                     spider.cookies_dict[cookiejar_name]['is_useful'] = 1
@@ -294,7 +294,7 @@ class ImagespiderRetryMiddleware(RetryMiddleware):
                 self.logger.info('%s--->429 request too much need rest 3min for :%s'%(spider.name, response.url))
                 print(request.meta['cookiejar'])
                 # print(response.body)
-                time.sleep(100)
+                time.sleep(20)
                 self.logger.info('%s--->finish rest and retry' % spider.name)
 
 

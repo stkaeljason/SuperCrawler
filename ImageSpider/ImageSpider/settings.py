@@ -89,7 +89,7 @@ DOWNLOADER_MIDDLEWARES = {
 }
 
 RETRY_HTTP_CODES = [500, 503, 504, 400, 408,429]
-RETRY_TIMES = 1
+RETRY_TIMES = 0
 
 EXTENSIONS = {
    'ImageSpider.extensions.SpiderOpenEx': None,
