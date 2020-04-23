@@ -17,30 +17,7 @@ from scrapy.http import FormRequest
 from ImageSpider import utils
 from ImageSpider.models.location_tag_model import loc_set_crawled
 # from ImageSpider.db import user_crawl_list
-# from ImageSpider.crawl_accounts import user_crawl_list
-
-user_crawl_list=[
-{
-    'username': 'liaohuan00001liaohuan',
-    'password': 'st123456',
-    'queryParams': {},
-},
-{
-    'username': 'gogotao999zhutao99j',
-    'password': 'st123456',
-    'queryParams': {},
-},
-{
-    'username': 'nbtz888tao88zhu',
-    'password': 'st123456',
-    'queryParams': {},
-},
-{
-    'username': 'yy1111yangyin',
-    'password': 'st123456',
-    'queryParams': {},
-},
-]
+from ImageSpider.crawl_accounts import user_crawl_list
 
 class ImgUserSpider(RedisCrawlSpider):
     name = 'ins_im_users_spider'
