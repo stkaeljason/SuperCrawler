@@ -119,6 +119,9 @@ class ImagespiderPipeline(object):
                     os.makedirs(image_fold)
                 with open(image_name, 'wb') as f:
                     f.write(item['img_content'])
+                    print('save imge success')
+                item['img_content'] = 'img_content'
+
 
                 # save mongodb
                 # image_dict = {'url':item['img_url'], 'all_data':item['img_data']}
