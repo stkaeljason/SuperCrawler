@@ -34,7 +34,7 @@ CELERYBEAT_SCHEDULE = {
     'product_user_url':{
         'task': 'CrawlSchedule.instagram_tasks.product_user_url',
 
-        'schedule': crontab(minute='*/6', hour='9-23'),
+        'schedule': crontab(minute='*/6', hour='1-5, 7-11,14-19,21-23'),
         'args': (90,'Kenya') # limt_num
 
     },
