@@ -1,38 +1,58 @@
 #coding:utf-8
 
 user_crawl_list=[
+# {
+#     'username': 'liaohuan00001liaohuan',
+#     'password': 'st123456',
+#     'queryParams': {},
+# },
+# {
+#     'username': 'gogotao999zhutao99j',
+#     'password': 'st123456',
+#     'queryParams': {},
+# },
+# {
+#     'username': 'nbtz888tao88zhu',
+#     'password': 'st123456',
+#     'queryParams': {},
+# },
+# {
+#     'username': 'yy1111yangyin',
+#     'password': 'st123456',
+#     'queryParams': {},
+# },
+# {
+#     'username': 'cym1111chenyammei',
+#     'password': 'st123456',
+#     'queryParams': {},
+# },
+# {
+#     'username': 'tjl1111tangjili',
+#     'password': 'st123456',
+#     'queryParams': {},
+# },
+# {
+#     'username': 'wyw1111wyw',
+#     'password': 'st123456',
+#     'queryParams': {},
+# },
 {
-    'username': 'liaohuan00001liaohuan',
+    'username': 'werttyy555',
     'password': 'st123456',
     'queryParams': {},
 },
 {
-    'username': 'gogotao999zhutao99j',
+    'username': 'qrrr88555',
     'password': 'st123456',
     'queryParams': {},
 },
 {
-    'username': 'nbtz888tao88zhu',
+    'username': 'opopp45677',
     'password': 'st123456',
     'queryParams': {},
 },
 {
-    'username': 'yy1111yangyin',
-    'password': 'st123456',
-    'queryParams': {},
-},
-{
-    'username': 'cym1111chenyammei',
-    'password': 'st123456',
-    'queryParams': {},
-},
-{
-    'username': 'tjl1111tangjili',
-    'password': 'st123456',
-    'queryParams': {},
-},
-{
-    'username': 'wyw1111wyw',
+    'username': 'inisng7743',
     'password': 'st123456',
     'queryParams': {},
 },
