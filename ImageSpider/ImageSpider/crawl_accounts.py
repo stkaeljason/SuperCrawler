@@ -31,11 +31,11 @@ user_crawl_list=[
 #     'password': 'st123456',
 #     'queryParams': {},
 # },
-{
-    'username': 'wyw1111wyw',
-    'password': 'st123456',
-    'queryParams': {},
-},
+# {
+#     'username': 'wyw1111wyw',
+#     'password': 'st123456',
+#     'queryParams': {},
+# },
 ]
 tag_accounts = {'tag0':[
 {
