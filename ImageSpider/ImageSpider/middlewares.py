@@ -294,7 +294,7 @@ class ImagespiderRetryMiddleware(RetryMiddleware):
                 self.logger.info('%s--->429 request too much need rest 3min for :%s'%(spider.name, response.url))
                 print(request.meta['cookiejar'])
                 # print(response.body)
-                time.sleep(20)
+                time.sleep(10)
                 self.logger.info('%s--->finish rest and retry' % spider.name)
 
 
