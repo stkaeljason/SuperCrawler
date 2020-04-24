@@ -133,7 +133,7 @@ class ImageSpider(RedisCrawlSpider):
 
     def parse_main_page(self, response):
 
-        if len(self.cookies_dict) > 2:
+        if len(self.cookies_dict) > 4:
             item = ImageItem()
             # sel = Selector(response.meta['profile_response'])
             sel = Selector(self.profile_response)
@@ -228,7 +228,7 @@ class ImageSpider(RedisCrawlSpider):
                               meta=response.meta,
                               errback=self.report_error
                               )
-                time.sleep(1)
+                time.sleep(random.randint(1, 2))
 
             else:
                 self.log('*********** finish user:%s ***********' % (response.meta['owner_id']))
