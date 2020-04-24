@@ -54,7 +54,7 @@ CONCURRENT_REQUESTS_PER_DOMAIN = 1
 CONCURRENT_REQUESTS_PER_IP = 0
 
 
-DOWNLOAD_DELAY = 0.8
+DOWNLOAD_DELAY = 1.2
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'ImageSpider (+http://www.yourdomain.com)'
