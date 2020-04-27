@@ -7,32 +7,12 @@ user_crawl_list=[
 #     'queryParams': {},
 # },
 # {
-#     'username': 'gogotao999zhutao99j',
-#     'password': 'st123456',
-#     'queryParams': {},
-# },
-# {
-#     'username': 'nbtz888tao88zhu',
-#     'password': 'st123456',
-#     'queryParams': {},
-# },
-# {
-#     'username': 'yy1111yangyin',
-#     'password': 'st123456',
-#     'queryParams': {},
-# },
-# {
 #     'username': 'cym1111chenyammei',
 #     'password': 'st123456',
 #     'queryParams': {},
 # },
 # {
 #     'username': 'tjl1111tangjili',
-#     'password': 'st123456',
-#     'queryParams': {},
-# },
-# {
-#     'username': 'wyw1111wyw',
 #     'password': 'st123456',
 #     'queryParams': {},
 # },
