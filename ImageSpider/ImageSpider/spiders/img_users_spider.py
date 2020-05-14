@@ -60,10 +60,13 @@ class ImgUserSpider(RedisCrawlSpider):
 
     cookies_dict = {}
     profile_response = None
+    user_crawl_limit = 60
+    user_count = None
 
     def parse(self, response):
         login_page = 'https://www.instagram.com/accounts/login/'
         self.profile_response = response
+        self.user_count = 0
         if len(self.cookies_dict) == 0:
             for form_data in user_crawl_list:
                 cookiejar_name = form_data['username']
@@ -108,6 +111,7 @@ class ImgUserSpider(RedisCrawlSpider):
                 loc_id = img_dict['entry_data']['LocationsPage'][0]['graphql']['location']['id']
                 short_pic_url = self.short_pic_format.format(shortcode=shortcode,loc_id=loc_id)
                 # print('testlsdlsd&&&&&&&----->',shortcode)
+                # self.user_count += 1
                 yield Request(short_pic_url, callback=self.parse_user_info, meta={'user_country_name':user_country_name}, headers=self.main_headers,
                               errback=self.report_error)
 
@@ -130,13 +134,14 @@ class ImgUserSpider(RedisCrawlSpider):
             shortcode = img['node']['shortcode']
             loc_id = img_dict['data']['location']['id']
             short_pic_url = self.short_pic_format.format(shortcode=shortcode, loc_id=loc_id)
+            # self.user_count += 1
             yield Request(short_pic_url, callback=self.parse_user_info, meta=response.meta, headers=self.main_headers,
                           errback=self.report_error)
 
         has_next_page = img_dict['data']['location']['edge_location_to_media']['page_info']['has_next_page']
 
 
-        if has_next_page:
+        if has_next_page and self.user_count < self.user_crawl_limit:
             end_cursor = img_dict['data']['location']['edge_location_to_media']['page_info']['end_cursor']
             url = self.next_page_format.format(query_hash='951c979213d7e7a1cf1d73e2f661cbd1', end_cursor=end_cursor)
             yield Request(url, callback=self.parse_morsepage,
@@ -145,6 +150,7 @@ class ImgUserSpider(RedisCrawlSpider):
                           errback=self.report_error)
             time.sleep(3.5)
         else:
+            print('fininsh this user')
             loc_set_crawled(img_dict['data']['location']['id'],is_crawled=1)
 
     def parse_user_info(self,response):
@@ -167,6 +173,7 @@ class ImgUserSpider(RedisCrawlSpider):
         item['user_profile_url'] = response.url
         item['user_country_name'] = response.meta['user_country_name']
         item['is_crawled'] = 0
+        self.user_count += 1
         # print('tesitetstsetes88888888888888')
         yield item
 
