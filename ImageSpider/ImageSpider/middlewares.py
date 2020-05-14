@@ -153,7 +153,7 @@ class ImagespiderDownloaderMiddleware(object):
     def process_response(self, request, response, spider):
         if 'ins_im' in spider.name:
 
-            if 'query/?query_hash=' in response.url or "https://www.instagram.com/explore/locations" in response.url:
+            if 'query/?query_hash=' in response.url:
                 cookiejar_name = request.meta['cookiejar']
                 if response.status == 429:
                     spider.cookies_dict[cookiejar_name]['is_useful'] = 1
