@@ -16,26 +16,26 @@ CELERY_TIMEZONE = 'Asia/Shanghai'
 
 CELERYBEAT_SCHEDULE = {
 
-    # 'product_city_url': {
-    #     'task': 'CrawlSchedule.instagram_tasks.product_city_url',
-    #
-    #     'schedule': crontab(minute='*/30'),
-    #
-    #     'args': (1,'United Arab Emirates') # limt_num crawl loc
-    #
-    # },
+    'product_city_url': {
+        'task': 'CrawlSchedule.instagram_tasks.product_city_url',
+
+        'schedule': crontab(minute='*/5'),
+
+        'args': (1,'Liberia') # limt_num crawl loc
+
+    },
     'product_loc_url':{
         'task': 'CrawlSchedule.instagram_tasks.product_loc_url',
 
-        'schedule': crontab(minute='*/2',hour='1-7,9-18,20-23'),
+        'schedule': crontab(minute='*/2',hour='0-4,6-9,15-23'),
 
-        'args': (2,'Kenya') # limt_num crawl user
+        'args': (1,'Liberia') # limt_num crawl user
     },
     'product_user_url':{
         'task': 'CrawlSchedule.instagram_tasks.product_user_url',
 
-        'schedule': crontab(minute='*/3', hour='1-7,9-18,20-23'),
-        'args': (20,'Kenya') # limt_num
+        'schedule': crontab(minute='*/6', hour='0-4,6-9,15-23'),
+        'args': (15,'Liberia') # limt_num
 
     },
     # 'get_yipei_number':{
