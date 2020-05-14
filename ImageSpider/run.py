@@ -13,13 +13,14 @@ setting = get_project_settings()
 
 
 def run(args):
-    enc_password = '#PWD_INSTAGRAM_BROWSER:6:1586323021:AZtQANEgU/aFVNI8sEHU94HBHYrByUasv1ifC5gjTXfEflllZ7eSsuC4YnCoz0jVXWRN/SPWdmbR4q6AJogmmee5dAvn4emTTogD+pUA6nAkoKgljpv1EYTnackE8N+cALsORbvg+ZVrPbMn'
+    enc_password = '#PWD_INSTAGRAM_BROWSER:10:1589438596:AdFQADRBqCphW/qIBumrQ7N2aNzaZTZRG8540TBGf631yrxoipkPrkjuWx6ENg/vXHukfamu5orYpHfXP2U8AJnvbR2ZjOwFUdxvBQZvcAp3bHVGOjFOSXxi141GbwLC7KMS2B6FjIghdUoK'
     execute_cmd = None
     if 'ins' in args.site:
         ImageSpider.name = 'ins_im_spider_'+args.name
 
         ins_use_list = get_ins_user(args.name)
-        crawl_account_list = [{'username': user.user_name, 'password': user.pass_wd,'queryParams': {}} for user in ins_use_list]
+        # crawl_account_list = [{'username': user.user_name, 'password': user.pass_wd,'queryParams': {}} for user in ins_use_list]
+        crawl_account_list = [{'username': user.user_name, 'enc_password': enc_password, 'queryParams': {}} for user in ins_use_list]
 
         # ImageSpider.account_list = accounts['account_list_'+args.name]
         ImageSpider.account_list = crawl_account_list
