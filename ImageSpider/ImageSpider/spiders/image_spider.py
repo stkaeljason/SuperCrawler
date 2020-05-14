@@ -24,8 +24,6 @@ from ImageSpider.models.crawl_config import get_config
 class ImageSpider(RedisCrawlSpider):
     name = 'ins_im_spider_jason'
     redis_key = 'ins_img:start_urls'
-    account_list = []
-    image_num_limit = None
     # image_save_fold = None
     # start_url = 'https://www.instagram.com/explore/locations/EC/ecuador/'
     user_profile_url_format = 'https://www.instagram.com/{username}/'
@@ -88,14 +86,18 @@ class ImageSpider(RedisCrawlSpider):
         'x-ig-app-id': '936619743392459',
         'x-ig-www-claim': 'hmac.AR2YuvekAxUlhQIFufQIkIkZrwHxjMCf2ahd6umqU7TX-HUx'
     }
+    account_list = []
+    image_num_limit = None
     cookies_dict = {}
     user_im_sum = 0
     profile_response = None
+    min_num_limit = None
 
     def parse(self, response):
         self.profile_response = response
         self.image_num_limit = int(get_config('ins_im_limit','ins_im_crawl'))  # 获取每个人的图片抓取量配置
         image_save_fold = get_config('ins_im_fold', 'ins_im_crawl')       # 获取人脸文件夹的保存文件夹名称
+        self.min_num_limit = int(get_config('min_im_limit','ins_im_crawl'))
         print('image_save_fold', image_save_fold)
 
         self.user_im_sum = 0
@@ -149,7 +151,7 @@ class ImageSpider(RedisCrawlSpider):
             self.more_headers['referer'] = self.user_profile_url_format.format(username=img_user_info['username'])
             # self.more_headers['x-instagram-gis'] = hashlib.md5('guayaquil-ecuador'+str(int(time.time())).encode('utf-8')).hexdigest()
 
-            if img_count > self.image_num_limit:
+            if img_count > self.min_num_limit:
                 for img in img_list:
                     if img['node']['__typename'] != 'GraphVideo':
                         item['img_id'] = img['node']['id']
@@ -185,7 +187,7 @@ class ImageSpider(RedisCrawlSpider):
                                   errback=self.report_error
                                   )
             else:
-                self.log('*********** finish user:%s  for <limit count***********' % (item['img_owner_id']))
+                self.log('*********** finish user:%s  for <min_num_limit count***********' % (item['img_owner_id']))
                 set_crawled(item['img_owner_id'], int(img_count), int(time.time()))
 
     def parse_more_page(self, response):
