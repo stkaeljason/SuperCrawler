@@ -135,7 +135,7 @@ class ImageSpider(RedisCrawlSpider):
 
     def parse_main_page(self, response):
 
-        if len(self.cookies_dict) > 2:
+        if len(self.cookies_dict) > 1:
             item = ImageItem()
             # sel = Selector(response.meta['profile_response'])
             sel = Selector(self.profile_response)
