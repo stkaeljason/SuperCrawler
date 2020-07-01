@@ -12,7 +12,7 @@ from ImageSpider.db import DBSession
 from ImageSpider import utils
 
 from sqlalchemy import create_engine
-engine = create_engine('mysql+pymysql://'+'root'+':'+'root'+'@'+'127.0.0.1'+':'+'3306'+'/'+'img_crawler'+'')
+engine = create_engine('mysql+pymysql://'+'root'+':'+'jason#333#abc'+'@'+'127.0.0.1'+':'+'3306'+'/'+'img_crawler'+'')
 
 Base = declarative_base()
 
