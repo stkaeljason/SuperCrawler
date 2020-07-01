@@ -51,7 +51,6 @@ redis_hander = redis.Redis(connection_pool=pool)
 #proxy_port
 proxy_port = conf['PROXY_PROT']['proxy_prot']
 
-
 engine = create_engine('mysql+pymysql://' + mysql_user + ':' + mysql_pwd + '@' + mysql_host + ':' + mysql_port + '/' + mysql_db + '',
 					   echo=False,pool_recycle=21600,pool_size=20)
 DBSession = sessionmaker(bind=engine)
