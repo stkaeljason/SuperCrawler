@@ -96,7 +96,7 @@ class ImgUserSpider(RedisCrawlSpider):
 
     def parse_main_loc(self,response):
         # item = ImgUserItem()
-        if len(self.cookies_dict) >2:
+        if len(self.cookies_dict) >1:
             # sel = Selector(response.meta['profile_response'])
             sel = Selector(self.profile_response)
             img_data = sel.xpath('//script[contains(text(),"window._sharedData")]/text()').extract()[0]
