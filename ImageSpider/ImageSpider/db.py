@@ -24,7 +24,8 @@ else:
 # mysql
 mysql_host = conf['MYSQL']['mysql_host']
 mysql_user = conf['MYSQL']['mysql_user']
-mysql_pwd = conf['MYSQL']['mysql_pwd']
+# mysql_pwd = conf['MYSQL']['mysql_pwd']
+mysql_pwd = 'jason#333#abc'
 mysql_db = conf['MYSQL']['mysql_db']
 mysql_port = conf['MYSQL']['mysql_port']
 
