@@ -16,14 +16,14 @@ CELERY_TIMEZONE = 'Asia/Shanghai'
 
 CELERYBEAT_SCHEDULE = {
 
-    'product_city_url': {
-        'task': 'CrawlSchedule.instagram_tasks.product_city_url',
-
-        'schedule': crontab(minute='*/20'),
-
-        'args': (1,'India') # limt_num crawl loc
-
-    },
+    # 'product_city_url': {
+    #     'task': 'CrawlSchedule.instagram_tasks.product_city_url',
+    #
+    #     'schedule': crontab(minute='*/20'),
+    #
+    #     'args': (1,'India') # limt_num crawl loc
+    #
+    # },
     'product_loc_url':{
         'task': 'CrawlSchedule.instagram_tasks.product_loc_url',
 
