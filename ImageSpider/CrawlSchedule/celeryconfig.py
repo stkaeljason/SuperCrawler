@@ -27,17 +27,17 @@ CELERYBEAT_SCHEDULE = {
     'product_loc_url':{
         'task': 'CrawlSchedule.instagram_tasks.product_loc_url',
 
-        'schedule': crontab(minute='*/3',hour='0-4,6-9,14-23'),
+        'schedule': crontab(minute='*/3',hour='0-4,6-9,14-18,20-23'),
 
         'args': (1,'India') # limt_num crawl user
     },
-    # 'product_user_url':{
-    #     'task': 'CrawlSchedule.instagram_tasks.product_user_url',
-    #
-    #     'schedule': crontab(minute='*/6', hour='0-4,6-8,15-23'),
-    #     'args': (15,'India') # limt_num
-    #
-    # },
+    'product_user_url':{
+        'task': 'CrawlSchedule.instagram_tasks.product_user_url',
+
+        'schedule': crontab(minute='*/6', hour='0-4,6-9,14-18,20-23'),
+        'args': (3,'India') # limt_num
+
+    },
     # 'get_yipei_number':{
     #     'task': 'CrawlSchedule.instagram_tasks.get_yipei_number',
     #
