@@ -13,7 +13,7 @@ setting = get_project_settings()
 
 
 def run(args):
-    enc_password = '#PWD_INSTAGRAM_BROWSER:10:1594691972:AWlQALWH2qqSoBX+YKdqHUaYxm/CC5V/LcuoVvte08Qdv5JBSPYq4wCS8oWCRj/d/08XxADUj+hl4lhPAIjTMx2HG4rBGz5VGt3wbBuygX4wp8Gz+oEE7MA56xaautgGIt9YqT/stmBuPm1J'
+    enc_password = '#PWD_INSTAGRAM_BROWSER:10:1595383490:ATVQAIBpI12T+2mAysosbxPgQxPkxWTtJ6Cfwu051r5ArOBSOP5gKGOhcTcfgxB2wiXhBmMl2MOz3mXsRnbZukeWNWBaE5Sew/E6revWz4HpYdWxg4g4mZIvSPlIO1guT4q6XGH0YEwlpa9A'
     execute_cmd = None
     if 'ins' in args.site:
         ImageSpider.name = 'ins_im_spider_'+args.name
