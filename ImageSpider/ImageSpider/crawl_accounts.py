@@ -2,23 +2,23 @@
 
 user_crawl_list=[
 {
-    'username': 'slfie_mflejj',
+    'username': 'sfsejf0jjkj_ljf',
 #    'password': 'st123456',
-    'enc_password': '#PWD_INSTAGRAM_BROWSER:10:1594262235:AfpQAOhEr9z5ZHA0ZOg4k8+kQPBhx2Pu1STD1MUc88R3d9I0xX7T81Uk2+mDu+IEgCb9P4iBqrhGgtO72oL5ChmeZ15253lOj9vQQgxh1HIDeES9yvqenJ8RuY9aBKME2aHHC0ErytITJp54',
+    'enc_password': '#PWD_INSTAGRAM_BROWSER:10:1595383490:ATVQAIBpI12T+2mAysosbxPgQxPkxWTtJ6Cfwu051r5ArOBSOP5gKGOhcTcfgxB2wiXhBmMl2MOz3mXsRnbZukeWNWBaE5Sew/E6revWz4HpYdWxg4g4mZIvSPlIO1guT4q6XGH0YEwlpa9A',
     'queryParams': {},
 },
 {
-    'username': '4353453_rwrwr',
+    'username': 'sfefef3343gg',
 #    'password': 'st123456',
-    'enc_password': '#PWD_INSTAGRAM_BROWSER:10:1594262235:AfpQAOhEr9z5ZHA0ZOg4k8+kQPBhx2Pu1STD1MUc88R3d9I0xX7T81Uk2+mDu+IEgCb9P4iBqrhGgtO72oL5ChmeZ15253lOj9vQQgxh1HIDeES9yvqenJ8RuY9aBKME2aHHC0ErytITJp54',
+    'enc_password': '#PWD_INSTAGRAM_BROWSER:10:1595383490:ATVQAIBpI12T+2mAysosbxPgQxPkxWTtJ6Cfwu051r5ArOBSOP5gKGOhcTcfgxB2wiXhBmMl2MOz3mXsRnbZukeWNWBaE5Sew/E6revWz4HpYdWxg4g4mZIvSPlIO1guT4q6XGH0YEwlpa9A',
     'queryParams': {},
 },
-{
-    'username': 'dsfsjjjjj98',
-   # 'password': 'st123456',
-    'enc_password': '#PWD_INSTAGRAM_BROWSER:10:1594262235:AfpQAOhEr9z5ZHA0ZOg4k8+kQPBhx2Pu1STD1MUc88R3d9I0xX7T81Uk2+mDu+IEgCb9P4iBqrhGgtO72oL5ChmeZ15253lOj9vQQgxh1HIDeES9yvqenJ8RuY9aBKME2aHHC0ErytITJp54',
-    'queryParams': {},
-}
+# {
+#     'username': 'dsfsjjjjj98',
+#    # 'password': 'st123456',
+#     'enc_password': '#PWD_INSTAGRAM_BROWSER:10:1594262235:AfpQAOhEr9z5ZHA0ZOg4k8+kQPBhx2Pu1STD1MUc88R3d9I0xX7T81Uk2+mDu+IEgCb9P4iBqrhGgtO72oL5ChmeZ15253lOj9vQQgxh1HIDeES9yvqenJ8RuY9aBKME2aHHC0ErytITJp54',
+#     'queryParams': {},
+# }
 ]
 
 tag_accounts = {'tag0':[
